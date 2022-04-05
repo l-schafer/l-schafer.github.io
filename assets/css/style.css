@@ -1,0 +1,572 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body, html {
+  font-family: "Open Sans", sans-serif;
+  color: #dcddde;
+  background-color: #202225;
+  height: 100%;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  /*transition: all 0.5s;*/
+  padding: 0 15px;
+  background: #202225;
+  overflow-y: auto;
+}
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 75px;
+}
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+#header .profile h1 a, #header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #36393f;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 1vmin;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.25);
+}
+
+#main {
+  margin-left: 250px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-menu a, .nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.nav-menu a i, .nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+  text-decoration: none;
+  background-color: #36393f;
+  border-radius: 1vmin;
+  color: #fff;
+}
+.nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
+  color: #149ddd;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 1vmin;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+.mobile-nav-active #header {
+  left: 0;
+}
+
+/*--------------------------------------------------------------
+# main Image Section
+--------------------------------------------------------------*/
+#mainImage {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/main.gif") top center;
+  background-size: cover;
+}
+#mainImage:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#mainImage .mainImage-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+#mainImage h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#mainImage p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+#mainImage p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+@media (min-width: 1024px) {
+  #mainImage {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #mainImage h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #mainImage h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: #2c3034;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #5282c0;
+}
+/* Fancy blobs after the header text */
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 10px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+}
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #5282c0;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.about .content ul strong {
+  margin-right: 10px;
+}
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+.about img {
+  border-radius: 1vmax;
+}
+/*--------------------------------------------------------------
+# About - Cards
+--------------------------------------------------------------*/
+.about-cards {
+  background-color: #2c3034;
+}
+.about-cards .about-card-item {
+  margin-bottom: 15px;
+}
+.about-cards #about-cards-filters {
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #8c99a6;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.about-cards #about-cards-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.about-cards #about-cards-filters li:hover, .about-cards #about-cards-filters li.filter-active {
+  color: #dff3fc;
+}
+.about-cards #about-cards-filters li:last-child {
+  margin-right: 0;
+}
+.about-cards .about-card-wrap {
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: 1;
+}
+.about-cards .about-card-wrap h4 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13pt;
+  color: #fff;
+}
+
+.about-cards .about-card-wrap::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.about-cards .about-card-wrap:hover {
+  z-index: 999;
+}
+.filter-hobby {
+  background-color: #a08a66;
+  border-radius: 2em;
+}
+.filter-interest {
+  background-color: #5e7c8e;
+  border-radius: 2em;
+}
+.filter-skill {
+  background-color: #709273;
+  border-radius: 2em;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio {
+  background-color: #2c3034;
+}
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-filters {
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #8c99a6;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.portfolio #portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-filters li:hover, .portfolio #portfolio-filters li.filter-active {
+  color: #dff3fc;
+}
+.portfolio #portfolio-filters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 1vmin;
+  background-color: #4c535a;
+}
+.portfolio .portfolio-wrap img {
+  filter: brightness(90%);
+}
+.portfolio .portfolio-wrap h4 {
+  padding-left: 15px;
+  padding-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13pt;
+  color: #fff;
+}
+.portfolio .portfolio-wrap p {
+  padding-left: 15px;
+  padding-right: 20px;
+  font-size: 11pt;
+  color: #BBB;
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap:hover {
+  z-index: 999;
+  transform: scale(1.04);
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio Details (portfolio pages)
+--------------------------------------------------------------*/
+.portfolio-details {
+  background-color: #2c3034;
+  margin-bottom: auto;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+  border-radius: 1vmin;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #4c535a;
+  opacity: 1;
+  border: 1px solid #149ddd;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #149ddd;
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  background-color: #4c535a;
+  border-radius: 1vmin;
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  padding-bottom: 130px;
+  background-color: #4c535a;
+}
+.contact .info {
+  border-radius: 1vmin;
+  padding: 30px;
+  background: #8c99a6;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+.contact .info i {
+  font-size: 20px;
+  color: #149ddd;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #dff3fc;
+}
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #2c3034;
+}
+.contact .info .email p {
+  padding-top: 5px;
+}
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+  background: #4c535a;
+  color: #dff3fc;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.foot  {
+  /*padding: 15px;*/
+  color: #36393f;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: 9999;
+  background: #202225;
+}
+.foot button {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+  background-color: darkorange;
+  border-radius: 1vmin;
+}
+@media (max-width: 1199px) {
+  .foot img {
+    position: static;
+    width: auto;
+    padding-right: 20px;
+  }
+}
