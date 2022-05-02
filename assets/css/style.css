@@ -1,3 +1,15 @@
+/* Temporary */
+.alert{
+  text-align: center;
+  animation: animate 1.5s linear infinite;
+  font-family: "Comic Sans MS", serif ;
+}
+
+@keyframes animate{
+  0%{opacity: 0.5;}
+  50%{opacity: 0.9;}
+  100%{ opacity: 0.5;}
+}
 
 /*--------------------------------------------------------------
 # General
@@ -298,7 +310,7 @@ section {
   list-style: none;
   text-align: center;
   background: #8c99a6;
-  border-radius: 50px;
+  border-radius: 1vmin;
   padding: 2px 15px;
 }
 .about-cards #about-cards-filters li {
@@ -374,7 +386,7 @@ section {
   list-style: none;
   text-align: center;
   background: #8c99a6;
-  border-radius: 50px;
+  border-radius: 1vmin;
   padding: 2px 15px;
 }
 .portfolio #portfolio-filters li {
@@ -554,6 +566,7 @@ section {
   width: 250px;
   z-index: 9999;
   background: #202225;
+  padding: 0 10px 10px 10px;
 }
 .foot button {
   padding-top: 5px;

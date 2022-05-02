@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio: Study Helper</title>
+  <title>Portfolio: System Information</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -22,6 +22,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
@@ -52,7 +53,7 @@
         <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li>
           <ul style="margin-left: .25in">
-            <li><a href="portfolio-pizzaparty.html" class="nav-link scrollto active"><i class="bx bx-bookmark"></i> <span>Study Helper</span></a></li>
+            <li><a href="portfolio-pizzaparty.html" class="nav-link scrollto active"><i class="bx bx-bookmark"></i> <span>System Information</span></a></li>
           </ul>
         </li>
         <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
@@ -72,39 +73,39 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh1.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s0.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh2.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s1.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh3.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s2.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh4.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s3.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh5.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s4.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh6.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s5.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh7.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s6.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh8.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s7.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/studyHelper/sh9.png" alt="">
+                  <img src="assets/img/portfolio/systemInformationMVP/s8.png" alt="">
                 </div>
 
               </div>
@@ -114,31 +115,71 @@
 
           <div class="col-lg-6">
             <div class="portfolio-info">
-              <h3>Study Helper</h3>
+              <h3>System Information</h3>
               <ul>
                 <li><strong>Category</strong>: Mobile Development (Android : Java)</li>
                 <li><strong>Course</strong>: Mobile App Development</li>
-                <li><strong>Completed</strong>: 5 April, 2022</li>
+                <li><strong>Completed</strong>: 6 May, 2022</li>
               </ul>
             </div>
             <div class="portfolio-description">
               <h2>Overview</h2>
               <p>
-                This app was a complex project introducing lots of new concepts.<br>
-                The Study Helper app allows the user to make flashcards (of sorts), organized into categories.
-                These categories can be customized by name, and deleted. Each category has its own set of flashcards to which the user can add, edit, or remove flashcards.<br>
-              </p>
-              <hr>
-              <h2>Challenges</h2>
+                This app was completed as part of my term project.<br>
+                It allows for the user to see information about their device that would be hard or impossible to find otherwise via the stock android settings app.<br><br>
+                It should be noted that the information panels shown are scrollable in two dimensions, but I cannot demonstrate this here,
+                since if I were to make a screen recording on my phone it would expose potentially sensitive information. Screenshots shown are from a virtual machine.
+              </p><br>
+              <h2>Need</h2>
+              <p>
+                The user cannot access the majority of device metrics collected by android.<br>
+                Even with developer mode enabled, the majority of this information is still hidden.<br>
+                Data shown to the user is very simplified and non-technical, making it not as useful
+              </p><br>
+              <h2>Approach</h2>
+              <p>
+                Provide the user with access to all device data.<br>
+                Present the data in a friendly and non-cluttered way.<br>
+                Create a modular design to allow for compatibility with the diverse android ecosystem
+              </p><br>
+              <h2>Benefits</h2>
+                <ul>
+                  <li>Easy for the user to access otherwise hidden information</li>
+                  <li>Quick access to information without using developer settings</li>
+                  <li>The app does not collect or sell the user’s data, and is offered free of charge.</li>
+                  <li>Free & Open-Source Software</li>
+                </ul><br>
+              <h2>Design</h2>
               <ul>
-                <li>Settings Activity</li>
-                <li>Data Management via. SQL Database</li>
-                <li>Enabling editing of flashcards and categories</li>
-                <li>Database Persistent Storage</li>
-                <li>Getting Data from an Internet Server</li>
-                <li>Dialogue Fragments</li>
-                <li>Item Recycler View</li>
-                <li>Managing project dependencies</li>
+                <li>Intuitive
+                <ul>
+                  <li>Information is categorized</li>
+                  <li>Data is acquired as-needed</li>
+                  <li>All displayed metrics are dynamically generated</li>
+                </ul></li>
+                <li>Accessible
+                <ul>
+                  <li>Light and Dark theme support, adjustable in the settings menu.</li>
+                  <li>High-contrast text</li>
+                </ul></li>
+              </ul><br>
+              <h2>What I Learned</h2>
+              <ul>
+                <li>An alarming amount of system information can be acquired without requesting any permissions</li>
+                <li>Subclasses of <i>android.system</i>, and <i>android.hardware</i> are challenging to use, and require frequent reference to their documentation.
+                  <ul><li>Each subclass often required a new way to parse its corresponding information, providing a challenge</li></ul></li>
+                  <li>Programmatically generating layout elements is a lot more efficient than having pre-made ones.</li>
+              </ul><br>
+              <h2>Future Development</h2>
+              <ul>
+              <li>Have each list item on the main activity be expandable, showing at-a-glance information.</li>
+                <li>Instantiate each category’s activity as a reusable fragment, since all the individual layouts are identical.</li>
+                <li>Add more categories
+                <ul><li>For this project, I focused on trying to get as much information as I could without requesting additional permissions</li>
+                <li>Bluetooth, WiFi, GPS, NFC, Device Sensors, and Camera modules</li></ul></li>
+                <li>Add more settings for user-friendliness
+                <ul><li>Allow choosing reported units (GB, MB, KB), Fahrenheit/Celsius, etc.</li></ul></li>
+                <li>Add dynamically updated information, graphs, and statistics.</li>
               </ul>
             </div>
           </div>
